@@ -1,0 +1,19 @@
+<div>
+    <h3>Today's Class</h3>
+    <div>
+        <table>
+            <tr class="classTableHeader">
+                <th>Track Aim</th>
+                <th>Track</th>
+                <th>Instructions</th>
+                <th>Song Length</th>
+            </tr>
+            <tr class="classTableRow" ng-repeat="track in todays_class">
+                <td>{{track.trackAim}}</td>
+                <td>{{track.track}}</td>
+                <td>{{track.instructions}}</td>
+                <td>{{track.time}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

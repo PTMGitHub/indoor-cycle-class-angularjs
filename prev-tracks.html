@@ -1,0 +1,122 @@
+<div>
+    <h3>Previous Tracks</h3>
+    <p>Here you can find all our previously published tracks.</p>
+    <div>
+        <h4>Select what type of tracks you would like to see:</h4>
+        <input type="checkbox" value="track" ng-model="showAll" />All
+        <div><input type="checkbox" value="track" ng-model="showWarmUp" />Warm Up Tracks</div>
+        <div><input type="checkbox" value="track" ng-model="showClimb" />Climb Tracks</div>
+        <div><input type="checkbox" value="track" ng-model="showHover" />Hover Tracks</div>
+        <div><input type="checkbox" value="track" ng-model="showSprint" />Sprint Tracks</div>
+        <div><input type="checkbox" value="track" ng-model="showCoolDown" />Cool Down Tracks</div>
+
+    </div>
+    <div ng-show="showAll" class="subContent">
+        <h3>All Tracks:</h3>
+        Search all by Track Name: <input type="text" ng-model="trackName" />
+        <br><br>
+        Or you can order by the following:
+        <div><input type="radio" ng-model="sortBy" value="track" /> Track Name</div>
+        <div><input type="radio" ng-model="sortBy" value="trackAim" /> Track Aim</div>
+        <br><br>
+        <table>
+            <tr class="classTableHeader" class="subContent">
+                <th>Track Aim</th>
+                <th>Track</th>
+                <th>Instructions</th>
+                <th>Song Length</th>
+            </tr>
+            <tr class="classTableRow" ng-repeat="tracks in prev_tracks | filter:{track:trackName} | orderBy:sortBy">
+                <td>{{tracks.trackAim}}</td>
+                <td>{{tracks.track}}</td>
+                <td>{{tracks.instructions}}</td>
+                <td>{{tracks.time}}</td>
+            </tr>
+        </table>
+    </div>
+    <div ng-show="showWarmUp" class="subContent">
+        <h3>Warm Up Tracks:</h3>
+        <table>
+            <tr class="classTableHeader">
+                <th>Track Aim</th>
+                <th>Track</th>
+                <th>Instructions</th>
+                <th>Song Length</th>
+            </tr>
+            <tr class="classTableRow" ng-repeat="tracks in prev_tracks | filter:{trackAim:'Warm Up'}">
+                <td>{{tracks.trackAim}}</td>
+                <td>{{tracks.track}}</td>
+                <td>{{tracks.instructions}}</td>
+                <td>{{tracks.time}}</td>
+            </tr>
+        </table>
+    </div>
+    <div ng-show="showClimb" class="subContent">
+        <h3>Climb Tracks:</h3>
+        <table>
+            <tr class="classTableHeader">
+                <th>Track Aim</th>
+                <th>Track</th>
+                <th>Instructions</th>
+                <th>Song Length</th>
+            </tr>
+            <tr class="classTableRow" ng-repeat="tracks in prev_tracks | filter:{trackAim:'Climb'}">
+                <td>{{tracks.trackAim}}</td>
+                <td>{{tracks.track}}</td>
+                <td>{{tracks.instructions}}</td>
+                <td>{{tracks.time}}</td>
+            </tr>
+        </table>
+    </div>
+    <div ng-show="showHover" class="subContent">
+        <h3>Hover Tracks:</h3>
+        <table>
+            <tr class="classTableHeader">
+                <th>Track Aim</th>
+                <th>Track</th>
+                <th>Instructions</th>
+                <th>Song Length</th>
+            </tr>
+            <tr class="classTableRow" ng-repeat="tracks in prev_tracks | filter:{trackAim:'Hover'}">
+                <td>{{tracks.trackAim}}</td>
+                <td>{{tracks.track}}</td>
+                <td>{{tracks.instructions}}</td>
+                <td>{{tracks.time}}</td>
+            </tr>
+        </table>
+    </div>
+    <div ng-show="showSprint" class="subContent">
+        <h3>Sprint Tracks:</h3>
+        <table>
+            <tr class="classTableHeader">
+                <th>Track Aim</th>
+                <th>Track</th>
+                <th>Instructions</th>
+                <th>Song Length</th>
+            </tr>
+            <tr class="classTableRow" ng-repeat="tracks in prev_tracks | filter:{trackAim:'Sprint'}">
+                <td>{{tracks.trackAim}}</td>
+                <td>{{tracks.track}}</td>
+                <td>{{tracks.instructions}}</td>
+                <td>{{tracks.time}}</td>
+            </tr>
+        </table>
+    </div>
+    <div ng-show="showCoolDown" class="subContent">
+        <h3>Cool Down Tracks:</h3>
+        <table>
+            <tr class="classTableHeader">
+                <th>Track Aim</th>
+                <th>Track</th>
+                <th>Instructions</th>
+                <th>Song Length</th>
+            </tr>
+            <tr class="classTableRow" ng-repeat="tracks in prev_tracks | filter:{trackAim:'Cool Down'}">
+                <td>{{tracks.trackAim}}</td>
+                <td>{{tracks.track}}</td>
+                <td>{{tracks.instructions}}</td>
+                <td>{{tracks.time}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

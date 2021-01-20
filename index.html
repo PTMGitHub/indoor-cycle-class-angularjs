@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="classApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RRR</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script src="scripts/classAppController.js"></script>
+    <script src="scripts/javascript.js"></script>
+
+</head>
+
+<body>
+    <div class="content">
+        <div class="header">
+            <h1>Rhythm Riding Recommendations</h1>
+            <div>
+                <div class="mainMenu">
+                    <a href="#!/">Home</a> |
+                    <a href="#!/todays-class">Todays Class</a> |
+                    <a href="#!/prev-tracks">Prevous Tracks</a> |
+                    <a href="#!/submit-a-song">Submit A Song</a>
+                </div>
+            </div>
+        </div>
+        <!-- The main classApp starts here -->
+        <div class="mainContent">
+            <ng-view></ng-view>
+        </div>
+</body>
+
+</html>

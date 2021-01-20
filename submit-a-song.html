@@ -1,0 +1,33 @@
+<div>
+    <h3>Submit a Song</h3>
+    <p>Do you have a song that will make a great rhythm ride track?</p>
+    <p>Submit it below</p>
+</div>
+<div class="Form">
+    <h3>"I have a suggestion..."</h3>
+    <form ng-submit="suggestedTrackForm()">
+        <div class="FormInput">
+            <span class="FormLabel">Track Name:</span>
+            <input type="text" ng-model="suggestedTrack.trackName" required="required" />
+        </div>
+        <div>
+            If you have a suggestion for the choreograpghy, enter it here:
+        </div>
+        <div>
+            <br><textarea rows="10" ng-model="suggestedTrack.instruction"></textarea>
+        </div>
+        <div class="SubmitButton">
+            <input type="submit" value="SUBMIT" />
+            <input type="reset" ng-click="resetForm()" value="Reset" />
+        </div>
+        <h1 ng-show="suggestedTrack">You entered: {{suggestedTrack}}</h1>
+    </form>
+</div>
+<div class="subContent" ng-show="showSubmitted">
+    <h3>The below has been saved</h3>
+    <div ng-repeat="enteredInput in savedSuggestedTrackJson">
+        <p>{{enteredInput.Track}}</p>
+        <p>{{enteredInput.Instructions}}</p>
+    </div>
+
+</div>

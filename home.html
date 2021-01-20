@@ -1,0 +1,64 @@
+<div>
+    <div style="display: inline-block;">
+        <div>
+            <img src="images/IMG_0023.jpg" alt="Me riding" id="LandingPic">
+        </div>
+        <div id="LandingText">
+            <p>
+                <span class="siteName">Rhythm Ride Recommendations</span> provides you with Rhythm
+                Riding style indoor cycling classes.
+            </p>
+            <h3 class="italic">What is Rhythm Riding?</h3>
+            <p>
+                It is where you let the music take the lead! You focus on riding to the beat of the music regardless
+                resistence or what moves you are currently
+                trying to achieve.
+            <p>
+
+            <h3><span class="siteName">Rhythm Ride Recommendations</span> direct to your inbox:
+                <span id="showForm" onclick="showForm()">Click here to sign up!</span></h3>
+        </div>
+    </div>
+</div>
+<div id="signUpForm" class="Form Hide">
+    <h3 class="textLeft"><span id="hideForm" onclick="hideForm()">(Hide Form)</span></h3>
+    <h3 id=" joinFormHeader">Sign up to daily emails:</h3>
+    <form id="joinForm">
+        <div id="inputError" class="inputError">
+
+        </div>
+        <div class="FormInput">
+            <span class="FormLabel" id="nameLabel">Name:</span>
+            <input type="text" name="name" id="name" placeholder="Joe Bloggs">
+        </div>
+        <div class="FormInput">
+            <span class="FormLabel" id="emailLabel">Email:</span>
+            <input type="email" name="email" id="email" placeholder="somthing@somewhere.com"
+                onkeyup="checkEmailOnKeyUp()">
+            <div id="validEmailText"></div>
+        </div>
+        <div class="FormInput">
+            <span class="FormLabel" id="birthdayLabel">Birthday:</span>
+            <input type="date" id="birthday" name="birthday">
+        </div>
+        <div class="FormInput">
+            <span class="FormLabel" id="joinLabel"> Do you want to join mailing list</span>
+            <input type="radio" name="JoinMailing" id="JoinYes" value="yes" />Yes!
+            <input type="radio" name="JoinMailing" id="JoinNo" value="no" />Actully Nah.
+        </div>
+        <!-- <div class="FormInput">
+            <span class="FormLabel">What are your favourite types of tracks:</span>
+            <input type="checkbox" name="NoSprints" id="NoSprints" value="true" />Sprints
+            <input type="checkbox" name="NoClimbs" id="NoClimbs" value="true" />Climbs
+            <input type="checkbox" name="NoHovers" id="NoHovers" value="true" />Hovers
+            <input type="checkbox" name="NoJumps" id="NoJumps" value="true" />Jumps
+        </div> -->
+
+        <div class="SubmitButton">
+            <input type="submit" name="submit" value="SUBMIT" onclick="return processForm()" />
+        </div>
+    </form>
+    <div id="SubmittedInfo">
+
+    </div>
+</div>
